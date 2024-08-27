@@ -19,11 +19,16 @@ public class Application {
 
 	public static void main(String[] args) {
 //		SpringApplication.run(Application.class, args);
+
+//		CREATIONAL
 //		testFactoryMethod();
 //		testAbstractFactory();
 //		testBuilder();
 //		testPrototype();
-		testSingleton();
+//		testSingleton();
+
+//		BEHVIORAL
+		testChainOfResponsability();
 	}
 
 	private static void testFactoryMethod() {
@@ -67,5 +72,10 @@ public class Application {
 	private static void testSingleton() {
 		com.jllerena.design_pattern.creational.singleton.example.Card.getInstance().setCardNumber("1234-1234-1234-1234");
 		System.out.println(com.jllerena.design_pattern.creational.singleton.example.Card.getInstance().getCardNumber());
+	}
+
+	private static void testChainOfResponsability() {
+		com.jllerena.design_pattern.behavioral.chain_of_responsability.example.Card card = new com.jllerena.design_pattern.behavioral.chain_of_responsability.example.Card();
+		card.creditCardRequest(100000);
 	}
 }
